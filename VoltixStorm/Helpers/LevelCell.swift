@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct LevelCell: View {
+    var levelNumber: Int
+    var hight: CGFloat = 90
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Image(.levelBack)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            Text("\(levelNumber)")
+                .foregroundStyle(.white)
+                .font(.system(size: hight/2.5, weight: .bold, design: .serif))
+                .minimumScaleFactor(0.5)
+                .padding(.bottom, hight/10)
+        }
+        .frame(width: hight, height: hight)
     }
 }
 
 #Preview {
-    LevelCell()
+    LevelCell(levelNumber: 2)
 }

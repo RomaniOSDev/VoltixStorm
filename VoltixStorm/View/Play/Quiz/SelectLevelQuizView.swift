@@ -9,10 +9,33 @@ import SwiftUI
 
 struct SelectLevelQuizView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Image(.mainBack)
+                .resizable()
+                .ignoresSafeArea()
+            VStack(spacing: 24) {
+                Text("SELECT QUIZ LEVEL:")
+                    .foregroundStyle(.white)
+                    .font(.system(size: 28, weight: .bold, design: .serif))
+                
+                VStack(spacing: 15) {
+                    ForEach(QuizLevel.allCases, id: \.self) { level in
+                        NavigationLink {
+                            QuizView(level: level)
+                        } label: {
+                            MainPinkBTNView(label: level.title)
+                        }
+                    }
+                }
+                .padding(.top, 8)
+            }
+            .padding()
+        }
     }
 }
 
 #Preview {
-    SelectLevelQuizView()
+    NavigationStack {
+        SelectLevelQuizView()
+    }
 }

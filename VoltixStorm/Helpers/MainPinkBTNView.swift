@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct MainPinkBTNView: View {
+    var label: String
+    var height: CGFloat = 100
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Image(.backForBTNMain)
+                .resizable()
+            Text(label)
+                .foregroundStyle(.white)
+                .font(.system(size: height/3, weight: .bold, design: .serif))
+                .textCase(.uppercase)
+        }.frame(height: height)
     }
 }
 
 #Preview {
-    MainPinkBTNView()
+    MainPinkBTNView(label: "play")
 }

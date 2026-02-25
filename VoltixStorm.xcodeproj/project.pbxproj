@@ -3,15 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXFileReference section */
+		206DEA47ECC0CEED00D23106 /* Pods_VoltixStorm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoltixStorm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6264D38808D2622598943941 /* Pods-VoltixStorm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoltixStorm.release.xcconfig"; path = "Target Support Files/Pods-VoltixStorm/Pods-VoltixStorm.release.xcconfig"; sourceTree = "<group>"; };
+		663E9EB1240B0BF3F379DEF9 /* Pods-VoltixStorm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoltixStorm.debug.xcconfig"; path = "Target Support Files/Pods-VoltixStorm/Pods-VoltixStorm.debug.xcconfig"; sourceTree = "<group>"; };
 		749383372F4CCAB100624469 /* VoltixStorm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoltixStorm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		749383492F4CCAB200624469 /* Exceptions for "VoltixStorm" folder in "VoltixStorm" target */ = {
+		749383712F4CCAE900624469 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -21,14 +24,7 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		749383392F4CCAB100624469 /* VoltixStorm */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				749383492F4CCAB200624469 /* Exceptions for "VoltixStorm" folder in "VoltixStorm" target */,
-			);
-			path = VoltixStorm;
-			sourceTree = "<group>";
-		};
+		749383692F4CCAE900624469 /* VoltixStorm */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (749383712F4CCAE900624469 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = VoltixStorm; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,11 +38,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23FC2D521C207DFA1502DC81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				663E9EB1240B0BF3F379DEF9 /* Pods-VoltixStorm.debug.xcconfig */,
+				6264D38808D2622598943941 /* Pods-VoltixStorm.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3593E36A241575F48DF3D31D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				206DEA47ECC0CEED00D23106 /* Pods_VoltixStorm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7493832E2F4CCAB100624469 = {
 			isa = PBXGroup;
 			children = (
-				749383392F4CCAB100624469 /* VoltixStorm */,
+				749383692F4CCAE900624469 /* VoltixStorm */,
 				749383382F4CCAB100624469 /* Products */,
+				23FC2D521C207DFA1502DC81 /* Pods */,
+				3593E36A241575F48DF3D31D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +80,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7493834A2F4CCAB200624469 /* Build configuration list for PBXNativeTarget "VoltixStorm" */;
 			buildPhases = (
+				E3EEC14ADC190D88D9327903 /* [CP] Check Pods Manifest.lock */,
 				749383332F4CCAB100624469 /* Sources */,
 				749383342F4CCAB100624469 /* Frameworks */,
 				749383352F4CCAB100624469 /* Resources */,
@@ -74,11 +90,9 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				749383392F4CCAB100624469 /* VoltixStorm */,
+				749383692F4CCAE900624469 /* VoltixStorm */,
 			);
 			name = VoltixStorm;
-			packageProductDependencies = (
-			);
 			productName = VoltixStorm;
 			productReference = 749383372F4CCAB100624469 /* VoltixStorm.app */;
 			productType = "com.apple.product-type.application";
@@ -99,6 +113,7 @@
 				};
 			};
 			buildConfigurationList = 749383322F4CCAB100624469 /* Build configuration list for PBXProject "VoltixStorm" */;
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -106,8 +121,6 @@
 				Base,
 			);
 			mainGroup = 7493832E2F4CCAB100624469;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 749383382F4CCAB100624469 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +140,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E3EEC14ADC190D88D9327903 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VoltixStorm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		749383332F4CCAB100624469 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +178,7 @@
 /* Begin XCBuildConfiguration section */
 		7493834B2F4CCAB200624469 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 663E9EB1240B0BF3F379DEF9 /* Pods-VoltixStorm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -150,8 +189,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -160,17 +200,22 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.VoltixStorm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		7493834C2F4CCAB200624469 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6264D38808D2622598943941 /* Pods-VoltixStorm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -181,8 +226,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -191,12 +237,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.VoltixStorm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -9,7 +9,34 @@ import SwiftUI
 
 struct PlayView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Image(.mainBack)
+                .resizable()
+                .ignoresSafeArea()
+            VStack(spacing: 30) {
+                Text("SELECT GAME:")
+                    .foregroundStyle(.white)
+                    .font(.system(size: 30, weight: .bold, design: .serif))
+                VStack(spacing: 15){
+                    NavigationLink {
+                        SelectLevelQuizView()
+                    } label: {
+                        MainPinkBTNView(label: "mind quiz")
+                    }
+                    NavigationLink {
+                        GardenLevelsView()
+                    } label: {
+                        MainPinkBTNView(label: "fruit garden")
+                    }
+                    NavigationLink {
+                        SelectFriutMosaicView()
+                    } label: {
+                        MainPinkBTNView(label: "fruit mosaic")
+                    }
+                    
+                }
+            }.padding()
+        }
     }
 }
 

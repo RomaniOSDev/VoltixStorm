@@ -9,7 +9,36 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            ZStack {
+                Image(.mainBack)
+                    .resizable()
+                    .ignoresSafeArea()
+                VStack {
+                    Image(.mainlabel)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                    VStack(spacing: 15){
+                        NavigationLink {
+                            PlayView()
+                        } label: {
+                            MainPinkBTNView(label: "play")
+                        }
+                        NavigationLink {
+                            GameRatingView()
+                        } label: {
+                            MainPinkBTNView(label: "rating")
+                        }
+                        NavigationLink {
+                            SettingsView()
+                        } label: {
+                            MainPinkBTNView(label: "settings")
+                        }
+
+                    }
+                }.padding()
+            }
+        }
     }
 }
 
