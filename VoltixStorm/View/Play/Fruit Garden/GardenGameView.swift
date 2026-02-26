@@ -2,7 +2,7 @@
 //  GardenGameView.swift
 //  VoltixStorm
 //
-//  Created by Роман Главацкий on 23.02.2026.
+//  Created by Doras Choenholz on 23.02.2026.
 //
 
 import SwiftUI
@@ -30,14 +30,14 @@ struct GardenGameView: View {
         GardenLevelData.data(for: levelData.id + 1)
     }
     
-    /// Набор фруктов, который может появляться на уровне (на ранних уровнях меньше ассортимента)
+    /// Fruits that can appear on the level (fewer on early levels)
     private var spawnFruits: [GardenFruit] {
         let all = GardenFruit.allCases
         let extras = all.filter { !goalFruits.contains($0) }
         
         switch levelData.id {
         case 1:
-            // только фрукты из задания
+            // goal fruits only
             return goalFruits
         case 2:
             return goalFruits + extras.prefix(1)
@@ -50,11 +50,11 @@ struct GardenGameView: View {
         }
     }
     
-    /// Случайный фрукт с повышенным шансом для тех, что в задании
+    /// Random fruit with higher chance for goal fruits
     private func randomFruit() -> GardenFruit {
         var weighted: [GardenFruit] = []
         for fruit in spawnFruits {
-            let weight = goalFruits.contains(fruit) ? 4 : 1  // фрукты из задания встречаются чаще
+            let weight = goalFruits.contains(fruit) ? 4 : 1  // goal fruits appear more often
             for _ in 0..<weight {
                 weighted.append(fruit)
             }
@@ -95,7 +95,7 @@ struct GardenGameView: View {
                 pauseOverlayView
             }
             
-            // скрытый NavigationLink для перехода на следующий уровень
+            // hidden NavigationLink to go to next level
             if let nextLevelData {
                 NavigationLink(
                     destination: GardenGameView(levelData: nextLevelData),
@@ -352,18 +352,18 @@ struct GardenGameView: View {
                 return
             }
             
-            // засчитываем собранные фрукты
+            // count collected fruits
             for idx in matches {
                 let fruit = grid[idx]
                 collected[fruit, default: 0] += 1
             }
             
-            // небольшая задержка перед исчезновением и падением
+            // short delay before removal and falling
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                 withAnimation(.easeInOut(duration: 0.2)) {
                     applyGravityAndFill(for: matches)
                 }
-                // после анимации проверяем следующие каскады
+                // after animation check for more cascades
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                     step()
                 }
@@ -373,10 +373,10 @@ struct GardenGameView: View {
         step()
     }
     
-    /// Перемещает фрукты вниз в каждом столбце и добавляет новые сверху
+    /// Move fruits down in each column and add new ones from top
     private func applyGravityAndFill(for removedIndices: Set<Int>) {
         for col in 0..<columns {
-            // собираем все фрукты в этом столбце, которые не были удалены
+            // collect all fruits in this column that weren't removed
             var columnFruits: [GardenFruit] = []
             for row in 0..<rows {
                 let idx = row * columns + col
@@ -388,14 +388,14 @@ struct GardenGameView: View {
             let emptyCount = rows - columnFruits.count
             var newColumn: [GardenFruit] = []
             
-            // сначала новые случайные фрукты для пустых ячеек сверху
+            // first new random fruits for empty cells at top
             for _ in 0..<emptyCount {
                 newColumn.append(randomFruit())
             }
-            // затем оставшиеся «упавшие» фрукты
+            // then remaining "fallen" fruits
             newColumn.append(contentsOf: columnFruits)
             
-            // записываем столбец обратно в сетку (сверху вниз)
+            // write column back to grid (top to bottom)
             for row in 0..<rows {
                 let idx = row * columns + col
                 grid[idx] = newColumn[row]

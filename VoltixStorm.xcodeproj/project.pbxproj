@@ -3,29 +3,63 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 60;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		7466ABA92F50C2D90051ACF0 /* LevelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7466AB862F50C2D90051ACF0 /* LevelCell.swift */; };
+		7466ABAA2F50C2D90051ACF0 /* MainPinkBTNView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7466AB872F50C2D90051ACF0 /* MainPinkBTNView.swift */; };
+		7466ABAB2F50C2D90051ACF0 /* RatingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7466AB882F50C2D90051ACF0 /* RatingManager.swift */; };
+		7466ABAC2F50C2D90051ACF0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7466AB8A2F50C2D90051ACF0 /* MainView.swift */; };
+		7466ABAD2F50C2D90051ACF0 /* GardenGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7466AB8C2F50C2D90051ACF0 /* GardenGameView.swift */; };
+		7466ABAE2F50C2D90051ACF0 /* GardenLevelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7466AB8D2F50C2D90051ACF0 /* GardenLevelsView.swift */; };
+		7466ABAF2F50C2D90051ACF0 /* GardenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7466AB8E2F50C2D90051ACF0 /* GardenModel.swift */; };
+		7466ABB02F50C2D90051ACF0 /* FruitMosaicGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7466AB902F50C2D90051ACF0 /* FruitMosaicGameView.swift */; };
+		7466ABB12F50C2D90051ACF0 /* SelectFriutMosaicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7466AB912F50C2D90051ACF0 /* SelectFriutMosaicView.swift */; };
+		7466ABB22F50C2D90051ACF0 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7466AB932F50C2D90051ACF0 /* QuizModel.swift */; };
+		7466ABB32F50C2D90051ACF0 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7466AB942F50C2D90051ACF0 /* QuizView.swift */; };
+		7466ABB42F50C2D90051ACF0 /* SelectLevelQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7466AB952F50C2D90051ACF0 /* SelectLevelQuizView.swift */; };
+		7466ABB52F50C2D90051ACF0 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7466AB972F50C2D90051ACF0 /* PlayView.swift */; };
+		7466ABB62F50C2D90051ACF0 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7466AB992F50C2D90051ACF0 /* RatingView.swift */; };
+		7466ABB72F50C2D90051ACF0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7466AB9B2F50C2D90051ACF0 /* SettingsView.swift */; };
+		7466ABB82F50C2D90051ACF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7466AB9E2F50C2D90051ACF0 /* AppDelegate.swift */; };
+		7466ABB92F50C2D90051ACF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7466ABA02F50C2D90051ACF0 /* ContentView.swift */; };
+		7466ABBA2F50C2D90051ACF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7466ABA62F50C2D90051ACF0 /* SceneDelegate.swift */; };
+		7466ABBB2F50C2D90051ACF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7466ABA72F50C2D90051ACF0 /* ViewController.swift */; };
+		7466ABBC2F50C2D90051ACF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7466AB9F2F50C2D90051ACF0 /* Assets.xcassets */; };
+		7466ABBE2F50C2D90051ACF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7466ABA32F50C2D90051ACF0 /* LaunchScreen.storyboard */; };
+		7466ABBF2F50C2D90051ACF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7466ABA52F50C2D90051ACF0 /* Main.storyboard */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		206DEA47ECC0CEED00D23106 /* Pods_VoltixStorm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoltixStorm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6264D38808D2622598943941 /* Pods-VoltixStorm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoltixStorm.release.xcconfig"; path = "Target Support Files/Pods-VoltixStorm/Pods-VoltixStorm.release.xcconfig"; sourceTree = "<group>"; };
 		663E9EB1240B0BF3F379DEF9 /* Pods-VoltixStorm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoltixStorm.debug.xcconfig"; path = "Target Support Files/Pods-VoltixStorm/Pods-VoltixStorm.debug.xcconfig"; sourceTree = "<group>"; };
+		7466AB862F50C2D90051ACF0 /* LevelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCell.swift; sourceTree = "<group>"; };
+		7466AB872F50C2D90051ACF0 /* MainPinkBTNView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPinkBTNView.swift; sourceTree = "<group>"; };
+		7466AB882F50C2D90051ACF0 /* RatingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingManager.swift; sourceTree = "<group>"; };
+		7466AB8A2F50C2D90051ACF0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		7466AB8C2F50C2D90051ACF0 /* GardenGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenGameView.swift; sourceTree = "<group>"; };
+		7466AB8D2F50C2D90051ACF0 /* GardenLevelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenLevelsView.swift; sourceTree = "<group>"; };
+		7466AB8E2F50C2D90051ACF0 /* GardenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenModel.swift; sourceTree = "<group>"; };
+		7466AB902F50C2D90051ACF0 /* FruitMosaicGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitMosaicGameView.swift; sourceTree = "<group>"; };
+		7466AB912F50C2D90051ACF0 /* SelectFriutMosaicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFriutMosaicView.swift; sourceTree = "<group>"; };
+		7466AB932F50C2D90051ACF0 /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
+		7466AB942F50C2D90051ACF0 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		7466AB952F50C2D90051ACF0 /* SelectLevelQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLevelQuizView.swift; sourceTree = "<group>"; };
+		7466AB972F50C2D90051ACF0 /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
+		7466AB992F50C2D90051ACF0 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		7466AB9B2F50C2D90051ACF0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		7466AB9E2F50C2D90051ACF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7466AB9F2F50C2D90051ACF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7466ABA02F50C2D90051ACF0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7466ABA12F50C2D90051ACF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7466ABA22F50C2D90051ACF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7466ABA42F50C2D90051ACF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7466ABA62F50C2D90051ACF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7466ABA72F50C2D90051ACF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		749383372F4CCAB100624469 /* VoltixStorm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoltixStorm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		749383712F4CCAE900624469 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 749383362F4CCAB100624469 /* VoltixStorm */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		749383692F4CCAE900624469 /* VoltixStorm */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (749383712F4CCAE900624469 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = VoltixStorm; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		749383342F4CCAB100624469 /* Frameworks */ = {
@@ -55,10 +89,112 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7466AB892F50C2D90051ACF0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7466AB862F50C2D90051ACF0 /* LevelCell.swift */,
+				7466AB872F50C2D90051ACF0 /* MainPinkBTNView.swift */,
+				7466AB882F50C2D90051ACF0 /* RatingManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7466AB8B2F50C2D90051ACF0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7466AB8A2F50C2D90051ACF0 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7466AB8F2F50C2D90051ACF0 /* Fruit Garden */ = {
+			isa = PBXGroup;
+			children = (
+				7466AB8C2F50C2D90051ACF0 /* GardenGameView.swift */,
+				7466AB8D2F50C2D90051ACF0 /* GardenLevelsView.swift */,
+				7466AB8E2F50C2D90051ACF0 /* GardenModel.swift */,
+			);
+			path = "Fruit Garden";
+			sourceTree = "<group>";
+		};
+		7466AB922F50C2D90051ACF0 /* Pazl */ = {
+			isa = PBXGroup;
+			children = (
+				7466AB902F50C2D90051ACF0 /* FruitMosaicGameView.swift */,
+				7466AB912F50C2D90051ACF0 /* SelectFriutMosaicView.swift */,
+			);
+			path = Pazl;
+			sourceTree = "<group>";
+		};
+		7466AB962F50C2D90051ACF0 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				7466AB932F50C2D90051ACF0 /* QuizModel.swift */,
+				7466AB942F50C2D90051ACF0 /* QuizView.swift */,
+				7466AB952F50C2D90051ACF0 /* SelectLevelQuizView.swift */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
+		7466AB982F50C2D90051ACF0 /* Play */ = {
+			isa = PBXGroup;
+			children = (
+				7466AB8F2F50C2D90051ACF0 /* Fruit Garden */,
+				7466AB922F50C2D90051ACF0 /* Pazl */,
+				7466AB962F50C2D90051ACF0 /* Quiz */,
+				7466AB972F50C2D90051ACF0 /* PlayView.swift */,
+			);
+			path = Play;
+			sourceTree = "<group>";
+		};
+		7466AB9A2F50C2D90051ACF0 /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				7466AB992F50C2D90051ACF0 /* RatingView.swift */,
+			);
+			path = Rating;
+			sourceTree = "<group>";
+		};
+		7466AB9C2F50C2D90051ACF0 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				7466AB9B2F50C2D90051ACF0 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		7466AB9D2F50C2D90051ACF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7466AB8B2F50C2D90051ACF0 /* Main */,
+				7466AB982F50C2D90051ACF0 /* Play */,
+				7466AB9A2F50C2D90051ACF0 /* Rating */,
+				7466AB9C2F50C2D90051ACF0 /* Settings */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7466ABA82F50C2D90051ACF0 /* VoltixStorm */ = {
+			isa = PBXGroup;
+			children = (
+				7466AB892F50C2D90051ACF0 /* Helpers */,
+				7466AB9D2F50C2D90051ACF0 /* View */,
+				7466AB9E2F50C2D90051ACF0 /* AppDelegate.swift */,
+				7466AB9F2F50C2D90051ACF0 /* Assets.xcassets */,
+				7466ABA02F50C2D90051ACF0 /* ContentView.swift */,
+				7466ABA12F50C2D90051ACF0 /* Info.plist */,
+				7466ABA32F50C2D90051ACF0 /* LaunchScreen.storyboard */,
+				7466ABA52F50C2D90051ACF0 /* Main.storyboard */,
+				7466ABA62F50C2D90051ACF0 /* SceneDelegate.swift */,
+				7466ABA72F50C2D90051ACF0 /* ViewController.swift */,
+			);
+			path = VoltixStorm;
+			sourceTree = "<group>";
+		};
 		7493832E2F4CCAB100624469 = {
 			isa = PBXGroup;
 			children = (
-				749383692F4CCAE900624469 /* VoltixStorm */,
+				7466ABA82F50C2D90051ACF0 /* VoltixStorm */,
 				749383382F4CCAB100624469 /* Products */,
 				23FC2D521C207DFA1502DC81 /* Pods */,
 				3593E36A241575F48DF3D31D /* Frameworks */,
@@ -88,9 +224,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				749383692F4CCAE900624469 /* VoltixStorm */,
 			);
 			name = VoltixStorm;
 			productName = VoltixStorm;
@@ -135,6 +268,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7466ABBC2F50C2D90051ACF0 /* Assets.xcassets in Resources */,
+				7466ABBE2F50C2D90051ACF0 /* LaunchScreen.storyboard in Resources */,
+				7466ABBF2F50C2D90051ACF0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,10 +306,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7466ABA92F50C2D90051ACF0 /* LevelCell.swift in Sources */,
+				7466ABAA2F50C2D90051ACF0 /* MainPinkBTNView.swift in Sources */,
+				7466ABAB2F50C2D90051ACF0 /* RatingManager.swift in Sources */,
+				7466ABAC2F50C2D90051ACF0 /* MainView.swift in Sources */,
+				7466ABAD2F50C2D90051ACF0 /* GardenGameView.swift in Sources */,
+				7466ABAE2F50C2D90051ACF0 /* GardenLevelsView.swift in Sources */,
+				7466ABAF2F50C2D90051ACF0 /* GardenModel.swift in Sources */,
+				7466ABB02F50C2D90051ACF0 /* FruitMosaicGameView.swift in Sources */,
+				7466ABB12F50C2D90051ACF0 /* SelectFriutMosaicView.swift in Sources */,
+				7466ABB22F50C2D90051ACF0 /* QuizModel.swift in Sources */,
+				7466ABB32F50C2D90051ACF0 /* QuizView.swift in Sources */,
+				7466ABB42F50C2D90051ACF0 /* SelectLevelQuizView.swift in Sources */,
+				7466ABB52F50C2D90051ACF0 /* PlayView.swift in Sources */,
+				7466ABB62F50C2D90051ACF0 /* RatingView.swift in Sources */,
+				7466ABB72F50C2D90051ACF0 /* SettingsView.swift in Sources */,
+				7466ABB82F50C2D90051ACF0 /* AppDelegate.swift in Sources */,
+				7466ABB92F50C2D90051ACF0 /* ContentView.swift in Sources */,
+				7466ABBA2F50C2D90051ACF0 /* SceneDelegate.swift in Sources */,
+				7466ABBB2F50C2D90051ACF0 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7466ABA32F50C2D90051ACF0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7466ABA22F50C2D90051ACF0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7466ABA52F50C2D90051ACF0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7466ABA42F50C2D90051ACF0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7493834B2F4CCAB200624469 /* Debug */ = {
@@ -186,6 +360,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VoltixStorm/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Voltix Storm";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -197,7 +372,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.VoltixStorm;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olti2354storm.sw3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -223,6 +398,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VoltixStorm/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Voltix Storm";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -234,7 +410,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.VoltixStorm;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olti2354storm.sw3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

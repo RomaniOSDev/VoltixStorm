@@ -2,7 +2,7 @@
 //  SettingsView.swift
 //  VoltixStorm
 //
-//  Created by Роман Главацкий on 25.02.2026.
+//  Created by Doras Choenholz on 25.02.2026.
 //
 
 import SwiftUI
@@ -89,13 +89,13 @@ struct SettingsView: View {
 
 extension SettingsView {
     private func openPrivacy() {
-        if let url = URL(string: "https://example.com/privacy-policy") {
+        if let url = URL(string: "https://www.termsfeed.com/live/c1a73f52-a25c-4b77-ab5d-45b86cd9c1e3") {
             UIApplication.shared.open(url)
         }
     }
     
     private func openTerms() {
-        if let url = URL(string: "https://example.com/terms") {
+        if let url = URL(string: "https://www.termsfeed.com/live/0199c416-21bb-474a-bc4c-2df984aa8502") {
             UIApplication.shared.open(url)
         }
     }

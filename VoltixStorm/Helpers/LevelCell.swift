@@ -2,7 +2,7 @@
 //  LevelCell.swift
 //  VoltixStorm
 //
-//  Created by Роман Главацкий on 24.02.2026.
+//  Created by Doras Choenholz on 24.02.2026.
 //
 
 import SwiftUI

@@ -2,7 +2,7 @@
 //  FruitMosaicGameView.swift
 //  VoltixStorm
 //
-//  Created by Роман Главацкий on 24.02.2026.
+//  Created by Doras Choenholz on 24.02.2026.
 //
 
 import SwiftUI
@@ -10,23 +10,23 @@ import SwiftUI
 struct FruitMosaicGameView: View {
     let image: MosaicImage
     
-    // 3 столбца × 4 строки = 12 ячеек, одна пустая
+    // 3 columns × 4 rows = 12 cells, one empty
     private let columns = 3
     private let rows = 4
     private var tileCount: Int { columns * rows }
     private var emptyTileIndex: Int { tileCount - 1 }
     
-    /// Текущий порядок кусочков на поле (перестановка 0...11, последний — пустой)
+    /// Current tile order on the board (permutation 0...11, last is empty)
     @State private var tiles: [Int] = []
     @State private var isCompleted: Bool = false
     
-    // Таймер 3 минуты
+    // 3-minute timer
     @State private var remainingTime: Int = 180
     @State private var timer: Timer? = nil
     @State private var isPaused: Bool = false
     @State private var showPauseOverlay: Bool = false
     
-    // Завершение уровня (успех / провал по таймеру)
+    // Level completion (success / fail by timer)
     @State private var showEndOverlay: Bool = false
     @State private var isWin: Bool = false
     @State private var didAddToRating: Bool = false
@@ -50,7 +50,7 @@ struct FruitMosaicGameView: View {
                     ZStack {
                         Image(.backQuestion)
                             .resizable()
-                        // одно поле 3x4 с перемешанными кусочками поверх рамки
+                        // 3x4 puzzle board with shuffled pieces over the frame
                         puzzleBoard(tileSize: tileSize, puzzleSize: puzzleSize)
                             .frame(width: puzzleWidth, height: puzzleHeight)
                     }
@@ -59,7 +59,7 @@ struct FruitMosaicGameView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                 }
                 
-                // таймер под пазлом
+                // timer below puzzle
                 Text(formattedTime)
                     .font(.system(size: 24, weight: .bold, design: .serif))
                     .foregroundStyle(.white)
@@ -144,12 +144,12 @@ struct FruitMosaicGameView: View {
     private func pieceImage(tileId: Int,
                             tileSize: CGFloat,
                             puzzleSize: CGSize) -> some View {
-        // пустая ячейка
+        // empty cell
         if tileId == emptyTileIndex {
             Color.clear
                 .frame(width: tileSize, height: tileSize)
         } else if image == .pazl1 {
-            // Для первой картинки — кусочки p1...p11
+            // First image — pieces p1...p11
             let name = "p\(tileId + 1)"
             Image(name)
                 .resizable()
@@ -157,7 +157,7 @@ struct FruitMosaicGameView: View {
                 .frame(width: tileSize, height: tileSize)
                 .clipped()
         } else if image == .pazl2 {
-            // Для второй картинки — кусочки q1...q11
+            // Second image — pieces q1...q11
             let name = "q\(tileId + 1)"
             Image(name)
                 .resizable()
@@ -165,7 +165,7 @@ struct FruitMosaicGameView: View {
                 .frame(width: tileSize, height: tileSize)
                 .clipped()
         } else if image == .pazl3 {
-            // Для третьей картинки — кусочки w1...w11
+            // Third image — pieces w1...w11
             let name = "w\(tileId + 1)"
             Image(name)
                 .resizable()
@@ -173,7 +173,7 @@ struct FruitMosaicGameView: View {
                 .frame(width: tileSize, height: tileSize)
                 .clipped()
         } else {
-            // Для остальных — нарезаем исходное изображение
+            // For others — crop from source image
             let originalRow = tileId / columns
             let originalCol = tileId % columns
             let fullTileWidth = puzzleSize.width / CGFloat(columns)
@@ -194,10 +194,10 @@ struct FruitMosaicGameView: View {
     // MARK: - Logic
     
     private func setupPuzzle() {
-        // стартовое состояние: собранный пазл, последний индекс — пустой
+        // initial state: solved puzzle, last index is empty
         tiles = Array(0..<tileCount)
         
-        // перемешиваем через последовательность валидных ходов, чтобы пазл оставался решаемым
+        // shuffle via valid moves so puzzle stays solvable
         var emptyPos = emptyTileIndex
         for _ in 0..<80 {
             let neighbors = neighborsOf(index: emptyPos)
@@ -207,7 +207,7 @@ struct FruitMosaicGameView: View {
             }
         }
         
-        // если вдруг вернулись в исходное состояние — перемешаем ещё раз
+        // if we ended up back at solved state — shuffle again
         if tiles == Array(0..<tileCount) {
             tiles.swapAt(0, 1)
         }
@@ -222,7 +222,7 @@ struct FruitMosaicGameView: View {
             if remainingTime > 0 && !isCompleted && !isPaused {
                 remainingTime -= 1
             } else {
-                // время вышло или игра завершена
+                // time's up or game finished
                 if remainingTime <= 0 && !isCompleted {
                     isWin = false
                     showEndOverlay = true
@@ -242,7 +242,7 @@ struct FruitMosaicGameView: View {
         guard !isCompleted, remainingTime > 0 else { return }
         guard let emptyPos = tiles.firstIndex(of: emptyTileIndex) else { return }
         
-        // двигать можно только соседний по вертикали/горизонтали кусок, рядом с пустой ячейкой
+        // can only move tile adjacent (vertically/horizontally) to empty cell
         if neighborsOf(index: emptyPos).contains(index) {
             withAnimation(.easeInOut(duration: 0.15)) {
                 tiles.swapAt(emptyPos, index)
@@ -251,7 +251,7 @@ struct FruitMosaicGameView: View {
         }
     }
     
-    /// Соседи по сетке (вверх/вниз/влево/вправо)
+    /// Neighbors on grid (up/down/left/right)
     private func neighborsOf(index: Int) -> [Int] {
         let row = index / columns
         let col = index % columns

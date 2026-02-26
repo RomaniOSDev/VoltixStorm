@@ -2,7 +2,7 @@
 //  SelectFriutMosaicView.swift
 //  VoltixStorm
 //
-//  Created by Роман Главацкий on 24.02.2026.
+//  Created by Doras Choenholz on 24.02.2026.
 //
 
 import SwiftUI
@@ -26,7 +26,7 @@ struct SelectFriutMosaicView: View {
                     .foregroundStyle(.white)
                     .font(.system(size: 28, weight: .bold, design: .serif))
                 
-                // большая картинка выбранного пазла
+                // large preview of selected puzzle
                 ZStack {
                     Image(.backQuestion)
                         .resizable()
@@ -46,7 +46,7 @@ struct SelectFriutMosaicView: View {
                 }
                
                 
-                // кнопки переключения пазлов
+                // puzzle selection buttons
                 HStack(spacing: 40) {
                     Button {
                         withAnimation(.easeInOut) {

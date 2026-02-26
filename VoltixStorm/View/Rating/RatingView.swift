@@ -2,7 +2,7 @@
 //  RatingView.swift
 //  VoltixStorm
 //
-//  Created by Роман Главацкий on 25.02.2026.
+//  Created by Doras Choenholz on 25.02.2026.
 //
 
 import SwiftUI
@@ -39,7 +39,7 @@ struct GameRatingView: View {
     
     private func load() {
         let all = RatingManager.shared.loadEntries()
-        // сортировка по очкам (убывание)
+        // sort by points (descending)
         entries = all.sorted { $0.points > $1.points }
     }
     

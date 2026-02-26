@@ -2,7 +2,7 @@
 //  GardenModel.swift
 //  VoltixStorm
 //
-//  Created by Роман Главацкий on 23.02.2026.
+//  Created by Doras Choenholz on 23.02.2026.
 //
 
 import SwiftUI

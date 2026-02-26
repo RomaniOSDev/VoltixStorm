@@ -2,7 +2,7 @@
 //  RatingManager.swift
 //  VoltixStorm
 //
-//  Created by Роман Главацкий on 25.02.2026.
+//  Created by Doras Choenholz on 25.02.2026.
 //
 
 import Foundation
@@ -60,7 +60,7 @@ final class RatingManager {
         }
     }
     
-    /// Добавить очки игроку (по имени). Имя — ключ.
+    /// Add points for player (by name). Name is the key.
     func addPoints(_ points: Int, forPlayer name: String) {
         guard !name.isEmpty else { return }
         var entries = loadEntries()
@@ -72,7 +72,7 @@ final class RatingManager {
         saveEntries(entries)
     }
     
-    /// Полностью очистить рейтинг и имя игрока
+    /// Clear all rating entries and player name
     func clearAll() {
         UserDefaults.standard.removeObject(forKey: entriesKey)
         UserDefaults.standard.removeObject(forKey: nameKey)
