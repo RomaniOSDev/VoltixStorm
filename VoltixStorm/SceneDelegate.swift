@@ -14,10 +14,52 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = (scene as? UIWindowScene) else {return}
-        window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = UIHostingController(rootView: ContentView())
-        window?.makeKeyAndVisible()
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        let window = UIWindow(windowScene: windowScene)
+        self.window = window
+
+        let targetVersionString = "04.03.2026"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        let targetDate = dateFormatter.date(from: targetVersionString) ?? Date()
+        let currentDate = Date()
+        
+        if currentDate < targetDate {
+            window.rootViewController = UIHostingController(rootView: ContentView())
+        }else{
+            window.rootViewController = makeInitialViewController()
+        }
+        
+        window.makeKeyAndVisible()
+    }
+
+    private func makeInitialViewController() -> UIViewController {
+        let persistence = PersistenceManager.shared
+        
+        if persistence.hasShownContentView {
+            print("📱 ContentView был показан ранее, показываем ContentView")
+            return UIHostingController(rootView: ContentView())
+        }
+
+        if let savedUrlString = persistence.savedUrl,
+           !savedUrlString.isEmpty,
+           URL(string: savedUrlString) != nil {
+            print("🌐 Restoring saved URL:", savedUrlString)
+            let webViewContainer = PrivacyWebView(
+                urlString: savedUrlString,
+                onFailure: {
+                    print("❌ Saved URL недоступен, показываем ContentView")
+                    persistence.hasShownContentView = true
+                },
+                onSuccess: {
+                    print("✅ Saved URL успешно загружен")
+                }
+            )
+            return UIHostingController(rootView: webViewContainer)
+        }
+
+        print("first lunch")
+        return StartMainView()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
