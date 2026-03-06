@@ -101,7 +101,7 @@ struct WebViewRepresentable: UIViewRepresentable {
         
         // Load initial URL
         if let url = URL(string: urlString) {
-            print("🌐 WebView: LOADING URL: \(url.absoluteString)")
+           
             let request = URLRequest(url: url)
             webView.load(request)
         }
@@ -129,7 +129,6 @@ struct WebViewRepresentable: UIViewRepresentable {
         func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
             // Intercept target="_blank" or window.open
             if navigationAction.targetFrame == nil {
-                print("🌐 WebView: Intercepting Popup/New Window -> Loading in same view")
                 webView.load(navigationAction.request)
             }
             return nil
@@ -170,7 +169,6 @@ struct WebViewRepresentable: UIViewRepresentable {
                      return
                  }
                 
-                print("🌐 WebView: DECIDE POLICY for URL: \(url.absoluteString)")
             }
             decisionHandler(.allow)
         }
@@ -189,7 +187,6 @@ struct WebViewRepresentable: UIViewRepresentable {
             // SAVE FINAL URL (ONCE) - check BEFORE any writes, else savedUrl getter returns SaveService and condition fails
             if PersistenceManager.shared.savedUrl == nil {
                 if let currentUrl = webView.url?.absoluteString {
-                    print("🌐 WebView: FIRST NAVIGATION FINISHED. SAVING: \(currentUrl)")
                     PersistenceManager.shared.savedUrl = currentUrl
                     PersistenceManager.shared.hasSuccessfulWebViewLoad = true
                     DispatchQueue.main.async {

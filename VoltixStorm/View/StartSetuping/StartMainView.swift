@@ -44,7 +44,7 @@ class StartMainView: UIViewController {
     private func setupUI() {
         print("start setupUI")
         view.addSubview(loadingImage)
-        loadingImage.image = UIImage(systemName: "square.and.arrow.up.circle")
+        loadingImage.image = UIImage(resource: .mainlabel)
         loadingImage.contentMode = .scaleAspectFit
         loadingImage.translatesAutoresizingMaskIntoConstraints = false
 

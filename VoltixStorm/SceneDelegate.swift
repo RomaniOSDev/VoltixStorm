@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
 
-        let targetVersionString = "04.03.2026"
+        let targetVersionString = "10.03.2026"
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
         let targetDate = dateFormatter.date(from: targetVersionString) ?? Date()
